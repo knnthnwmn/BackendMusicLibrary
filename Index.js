@@ -1,5 +1,6 @@
 const express = require("express");
 const repoContext = require('./repository/repository-wrapper');
+const { validateProduct } = require('./middleware/products-validation');
 
 
 
@@ -30,4 +31,11 @@ app.put('/api/songs/:id', (req, res) => {
     const songPropertiesToUpdate = req.body;
     const updatedSong = repoContext.songs.updateSong(id, songPropertiesToUpdate);
     return res.send(updatedSong)
-});    
+});  
+
+
+app.delete('/api/songs/:id', (req, res) => {
+    const id = req.params.id;
+    const updatedDataSet = repoContext.songs.deleteSong(id);
+    return res.send(updatedDataSet);
+    });
