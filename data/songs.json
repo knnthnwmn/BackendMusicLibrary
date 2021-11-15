@@ -182,5 +182,13 @@
     "artist": "The Beatles",
     "genre": "Folk Rock",
     "releaseDate": "12/03/1965"
+  },
+  {
+    "id": 24,
+    "title": "The Freeway",
+    "album": "Rubber Soul",
+    "artist": "Kenneth Newman",
+    "genre": "Folk Rock",
+    "releaseDate": "12/03/1965"
   }
 ]
